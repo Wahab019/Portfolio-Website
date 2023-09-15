@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -170,88 +170,13 @@
     </div>
 
 
+    <!-- GO TO TOP -->
 
+    <a title="Go to Top" href="#" class="to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
-
-        <!-- GO TO TOP -->
-
-        <a title="Go to Top" href="#" class="to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-
-
-
-
-        <script>
-
-            const toTop = document.querySelector(".to-top");
-
-            window.addEventListener("scroll", () => {
-                if(window.pageYOffset > 100) {
-                    toTop.classList.add("active");
-                } else {
-                    toTop.classList.remove("active");
-                }
-            })
-
-        </script>
-
-
-
-
-
-    <script>
-
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-
-    </script>
-
-    <script>
-
-        var sidemenu = document.getElementById("sidemenu");
-
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-
-    </script>
-
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx7jTJX0CLR671Cxvq2XgmhU1e5ddEKNZGOyBdsHsuR41Dmg8yYTbcsqcWc5JeBEnFugw/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
-
-
-
+    <script src="./js/script.js"></script>
+    
 </body>
 </html>
